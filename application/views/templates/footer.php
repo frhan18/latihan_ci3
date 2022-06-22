@@ -1,5 +1,4 @@
 <!-- end navbar -->
-
 <script src="<?= base_url('assets/') . 'js/bootstrap.js'; ?>"></script>
 
 
