@@ -38,6 +38,7 @@ class Matakuliah extends CI_Controller
             ];
             $saved_matakuliah = $this->db->insert('tb_matakuliah', $matakuliah);
             if ($saved_matakuliah) {
+                $this->session->set_flashdata('message', 'Data matakuliah di tambahkan');
                 redirect('list');
             }
         }
@@ -57,6 +58,7 @@ class Matakuliah extends CI_Controller
         ];
         $updated_matakuliah = $this->db->update('tb_matakuliah', $matakuliah,  ['id_matakuliah' => $id]);
         if ($updated_matakuliah) {
+            $this->session->set_flashdata('message', 'Data matakuliah di perbarui');
             redirect('list');
         }
     }
@@ -71,6 +73,7 @@ class Matakuliah extends CI_Controller
 
         $delete_matakuliah = $this->db->delete('tb_matakuliah', ['id_matakuliah' => $id]);
         if ($delete_matakuliah) {
+            $this->session->set_flashdata('message', 'Data matakuliah di hapus');
             redirect('list');
         }
     }
