@@ -52,3 +52,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'web';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+
+$route['list'] = 'matakuliah/index';
+$route['form-matakuliah-prosess'] = 'matakuliah/form_process';
+$route['form-matakuliah-update/(:any)'] = 'matakuliah/form_update/$1';
+$route['form-matakuliah-delete/(:any)'] = 'matakuliah/form_delete/$1';
